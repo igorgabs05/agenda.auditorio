@@ -1,0 +1,1075 @@
+/* Tema Senac - Cores institucionais */
+:root {
+    --senac-azul: #003C7E;
+    --senac-laranja: #F58220;
+    --senac-branco: #FFFFFF;
+    --senac-azul-escuro: #002855;
+    --senac-laranja-claro: #FF9933;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--senac-azul) 0%, var(--senac-azul-escuro) 100%) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--senac-branco) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--senac-branco) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--senac-laranja) !important;
+    transform: translateY(-2px);
+}
+
+.navbar .btn-outline-light {
+    border-color: var(--senac-laranja);
+    color: var(--senac-laranja);
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: var(--senac-laranja);
+    border-color: var(--senac-laranja);
+    color: var(--senac-branco);
+}
+
+/* Botões primários */
+.btn-primary {
+    background: linear-gradient(135deg, var(--senac-laranja) 0%, var(--senac-laranja-claro) 100%);
+    border: none;
+    box-shadow: 0 2px 4px rgba(245, 130, 32, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--senac-laranja-claro) 0%, var(--senac-laranja) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 130, 32, 0.4);
+}
+
+/* Botões secundários */
+.btn-secondary {
+    background-color: var(--senac-azul);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--senac-azul-escuro);
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--senac-azul) 0%, var(--senac-azul-escuro) 100%);
+    color: var(--senac-branco);
+    font-weight: bold;
+    border: none;
+}
+
+/* Badges de status */
+.badge-pendente {
+    background-color: var(--senac-laranja);
+    color: var(--senac-branco);
+}
+
+.badge-aprovado {
+    background-color: #28a745;
+    color: var(--senac-branco);
+}
+
+.badge-recusado {
+    background-color: #dc3545;
+    color: var(--senac-branco);
+}
+
+.badge-cancelado {
+    background-color: #6c757d;
+    color: var(--senac-branco);
+}
+
+/* Alerts */
+.alert-info {
+    background-color: rgba(0, 60, 126, 0.1);
+    border-color: var(--senac-azul);
+    color: var(--senac-azul-escuro);
+}
+
+.alert-warning {
+    background-color: rgba(245, 130, 32, 0.1);
+    border-color: var(--senac-laranja);
+    color: #cc6a1a;
+}
+
+/* Modal */
+.modal-header {
+    background: linear-gradient(135deg, var(--senac-azul) 0%, var(--senac-azul-escuro) 100%);
+    color: var(--senac-branco);
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--senac-laranja);
+    box-shadow: 0 0 0 0.2rem rgba(245, 130, 32, 0.25);
+}
+
+.form-label {
+    color: var(--senac-azul-escuro);
+    font-weight: 500;
+}
+
+/* Calendar */
+.fc-button-primary {
+    background-color: var(--senac-laranja) !important;
+    border-color: var(--senac-laranja) !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc-button-primary:hover {
+    background-color: var(--senac-laranja-claro) !important;
+    border-color: var(--senac-laranja-claro) !important;
+}
+
+.fc-button-primary:not(:disabled) {
+    opacity: 1 !important;
+}
+
+.fc-button-primary:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+}
+
+.fc-button-active {
+    background-color: var(--senac-azul) !important;
+    border-color: var(--senac-azul) !important;
+}
+
+.fc-button-group {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc-button-group > .fc-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc-toolbar-chunk {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc-daygrid-event {
+    border-left: 3px solid var(--senac-laranja);
+}
+
+/* Garantir que os botões de visualização funcionem */
+.fc-dayGridMonth-button,
+.fc-timeGridWeek-button,
+.fc-timeGridDay-button,
+.fc-dayGridMonth-button,
+.fc-timeGridWeek-button,
+.fc-timeGridDay-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    user-select: none;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Remover qualquer bloqueio de eventos */
+.fc .fc-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc .fc-button:not(:disabled) {
+    pointer-events: auto !important;
+}
+
+/* Garantir que o toolbar não bloqua botões */
+.fc-toolbar {
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fc-toolbar-title {
+    pointer-events: none !important;
+}
+
+/* Garantir que a área do calendário não bloqueia os botões */
+#calendar *, #calendar-admin * {
+    box-sizing: border-box;
+}
+
+.fc .fc-button-group > .fc-button:focus,
+.fc .fc-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 60, 126, 0.25) !important;
+}
+
+/* Garantir que nenhum elemento bloqueia os botões */
+.fc .fc-toolbar .fc-button-group,
+.fc .fc-toolbar .fc-button-group .fc-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Remover qualquer elemento invisível que possa estar sobrepondo */
+.fc-toolbar::before,
+.fc-toolbar::after {
+    pointer-events: none !important;
+}
+
+/* Força os botões a serem interativos */
+.fc-toolbar-button,
+.fc-button-group-button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* Logo */
+.logo-senac {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Login page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--senac-azul) 0%, var(--senac-azul-escuro) 100%);
+}
+
+.login-card {
+    background: var(--senac-branco);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, var(--senac-laranja) 0%, var(--senac-laranja-claro) 100%);
+    padding: 2rem;
+    text-align: center;
+    color: var(--senac-branco);
+}
+
+/* Links */
+a {
+    color: var(--senac-laranja);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--senac-laranja-claro);
+    text-decoration: underline;
+}
+
+/* Table */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 60, 126, 0.05);
+}
+
+.table thead {
+    background-color: var(--senac-azul);
+    color: var(--senac-branco);
+}
+
+/* Notificações */
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(245, 130, 32, 0.1);
+}
+
+.dropdown-item > div {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.dropdown-item small {
+    display: block;
+    max-width: 300px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.fw-bold {
+    color: var(--senac-azul-escuro);
+}
+
+/* Ícone de Notificações com Badge */
+.notification-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.notification-badge i {
+    font-size: 1.25rem;
+    color: var(--senac-branco);
+    transition: all 0.3s ease;
+}
+
+.notification-badge:hover i {
+    color: var(--senac-laranja);
+    transform: scale(1.1);
+}
+
+.notification-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--senac-laranja);
+    color: var(--senac-branco);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    animation: pulse 2s infinite;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-badge.has-notifications i {
+    animation: bell-shake 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bell-shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(-10deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Loading spinner */
+.spinner-border {
+    color: var(--senac-laranja);
+}
+
+/* Footer (se houver) */
+footer {
+    background-color: var(--senac-azul-escuro);
+    color: var(--senac-branco);
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* Botões de ação em tabelas */
+.btn-group .btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-group .btn-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-group .btn-primary {
+    background: linear-gradient(135deg, var(--senac-azul) 0%, var(--senac-azul-escuro) 100%);
+    border: none;
+    color: var(--senac-branco);
+}
+
+.btn-group .btn-primary:hover {
+    background: linear-gradient(135deg, var(--senac-azul-escuro) 0%, var(--senac-azul) 100%);
+}
+
+.btn-group .btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+    color: var(--senac-branco);
+}
+
+.btn-group .btn-danger:hover {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: var(--senac-azul);
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--senac-laranja);
+    border-bottom-color: var(--senac-laranja);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--senac-laranja);
+    background-color: transparent;
+    border-bottom-color: var(--senac-laranja);
+    font-weight: bold;
+}
+
+/* Sistema de Notificações Toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast-notification {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.toast-notification::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+}
+
+.toast-notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.toast-notification.success::before {
+    background-color: #28a745;
+}
+
+.toast-notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.toast-notification.error::before {
+    background-color: #dc3545;
+}
+
+.toast-notification.warning {
+    background-color: rgba(245, 130, 32, 0.15);
+    color: #cc6a1a;
+    border: 1px solid var(--senac-laranja);
+}
+
+.toast-notification.warning::before {
+    background-color: var(--senac-laranja);
+}
+
+.toast-notification.info {
+    background-color: rgba(0, 60, 126, 0.15);
+    color: var(--senac-azul-escuro);
+    border: 1px solid var(--senac-azul);
+}
+
+.toast-notification.info::before {
+    background-color: var(--senac-azul);
+}
+
+.toast-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.toast-message {
+    font-size: 14px;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast-close:hover {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.toast-notification.removing {
+    animation: slideOut 0.3s ease-out forwards;
+}
+
+/* Calendário otimizado */
+#calendar, #calendar-admin {
+    max-width: 100%;
+    height: 600px;
+}
+
+.fc-day-sun {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+}
+
+.fc-day-sun .fc-daygrid-day-number {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.fc-day.feriado {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+}
+
+.fc-day.feriado .fc-daygrid-day-number {
+    color: #856404;
+    font-weight: bold;
+}
+
+.fc-event {
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.fc-event.pendente {
+    background-color: var(--senac-laranja) !important;
+    border-color: var(--senac-laranja) !important;
+}
+
+.fc-event.aprovado {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+/* Badge de feriado */
+.feriado-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+    background-color: #ffc107;
+    color: #856404;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE E TABLETS
+   ============================================ */
+
+/* Tablets e dispositivos médios (até 992px) */
+@media (max-width: 992px) {
+    /* Navbar */
+    .navbar-collapse {
+        background-color: var(--senac-azul-escuro);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-nav {
+        margin-bottom: 1rem;
+    }
+    
+    /* Cards do dashboard */
+    .row.mb-4 .col-md-3 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Calendário */
+    #calendar, #calendar-admin {
+        height: 500px;
+    }
+    
+    /* Tabelas */
+    .table-responsive {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+    
+    /* Botões em grupo */
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 0.25rem;
+        border-radius: 4px !important;
+    }
+    
+    /* Gráficos */
+    .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Modal */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+/* Smartphones (até 768px) */
+@media (max-width: 768px) {
+    /* Logo menor */
+    .logo-senac {
+        max-height: 35px;
+    }
+    
+    /* Navbar brand */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    /* Container */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Cards */
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Dashboard cards */
+    .row.mb-4 .col-md-3 {
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-body h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body h6 {
+        font-size: 0.875rem;
+    }
+    
+    /* Tabs */
+    .nav-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #dee2e6;
+    }
+    
+    .nav-tabs .nav-item {
+        flex: 1 1 auto;
+        min-width: 120px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-tabs .nav-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+    }
+    
+    .nav-tabs .nav-link i {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Calendário */
+    #calendar, #calendar-admin {
+        height: 450px;
+    }
+    
+    .fc .fc-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .fc .fc-toolbar-title {
+        font-size: 1.2rem;
+    }
+    
+    .fc .fc-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.875rem;
+    }
+    
+    .feriado-badge {
+        font-size: 8px;
+        padding: 1px 3px;
+    }
+    
+    /* Solicitações pendentes */
+    .notification-item {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Formulários */
+    .form-label {
+        font-size: 0.875rem;
+    }
+    
+    .form-control,
+    .form-select {
+        font-size: 0.875rem;
+    }
+    
+    /* Tabelas */
+    .table {
+        font-size: 0.875rem;
+    }
+    
+    .table thead th {
+        padding: 0.5rem;
+    }
+    
+    .table tbody td {
+        padding: 0.5rem;
+    }
+    
+    /* Botões */
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Notificações toast */
+    .toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .toast-notification {
+        min-width: auto;
+        max-width: 100%;
+        padding: 12px 16px;
+        font-size: 0.875rem;
+    }
+    
+    .toast-icon {
+        font-size: 20px;
+    }
+    
+    /* Dropdown de notificações */
+    .dropdown-menu {
+        max-width: calc(100vw - 30px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .dropdown-item small {
+        max-width: 100%;
+    }
+    
+    /* Gráficos */
+    canvas {
+        max-height: 250px !important;
+    }
+    
+    #cards-resumo .card {
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Input groups */
+    .input-group {
+        flex-wrap: wrap;
+    }
+    
+    .input-group .form-control {
+        flex: 1 1 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .input-group .btn {
+        flex: 1 1 100%;
+    }
+}
+
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
+    /* Container */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Títulos */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    h6 {
+        font-size: 0.875rem;
+    }
+    
+    /* Cards do dashboard */
+    .card-body h2 {
+        font-size: 1.25rem;
+    }
+    
+    /* Tabs */
+    .nav-tabs .nav-item {
+        min-width: 100px;
+    }
+    
+    .nav-tabs .nav-link {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.5rem;
+    }
+    
+    /* Calendário */
+    #calendar, #calendar-admin {
+        height: 400px;
+    }
+    
+    .fc .fc-toolbar-title {
+        font-size: 1rem;
+    }
+    
+    .fc .fc-button {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .fc-daygrid-day-number {
+        font-size: 0.75rem;
+    }
+    
+    /* Modal */
+    .modal-dialog {
+        margin: 0.25rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    /* Formulários */
+    .row .col-md-6 {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Tabelas - scroll horizontal */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .table {
+        min-width: 600px;
+        font-size: 0.75rem;
+    }
+    
+    /* Gráficos */
+    canvas {
+        max-height: 200px !important;
+    }
+}
+
+/* Landscape em smartphones */
+@media (max-width: 768px) and (orientation: landscape) {
+    #calendar, #calendar-admin {
+        height: 350px;
+    }
+    
+    .modal-dialog {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* Melhorias de toque para mobile */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar área de toque de botões */
+    .btn {
+        min-height: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    .btn-sm {
+        min-height: 38px;
+    }
+    
+    /* Links */
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    /* Checkbox e radio */
+    .form-check-input {
+        width: 24px;
+        height: 24px;
+        margin-top: 0;
+    }
+    
+    /* Tabs */
+    .nav-tabs .nav-link {
+        min-height: 50px;
+    }
+    
+    /* Calendário - área de toque maior */
+    .fc-daygrid-day {
+        min-height: 60px;
+    }
+    
+    .fc .fc-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Impressão */
+@media print {
+    .navbar,
+    .btn,
+    .nav-tabs,
+    .modal,
+    .toast-container,
+    footer {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .table {
+        border: 1px solid #000;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #000;
+    }
+}
